@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="90dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02" >
+
+        <TextView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:autoLink="all"
+            android:background="@drawable/logo" />
+
+        <Button
+            android:id="@+id/blogbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/blog"
+            android:contentDescription="@string/blogbutton"
+            android:maxHeight="20dp"
+            android:onClick="toBlog" />
+
+        <Button
+            android:id="@+id/webbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/blogbutton"
+            android:background="@drawable/web"
+            android:maxHeight="20dp"
+            android:onClick="toWeb" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/webbutton"
+            android:layout_below="@+id/webbutton"
+            android:layout_marginLeft="29dp"
+            android:text="@string/webtext" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/blogbutton"
+            android:layout_marginLeft="34dp"
+            android:text="@string/gotoblog" />
+
+    </RelativeLayout>
+
+</LinearLayout>

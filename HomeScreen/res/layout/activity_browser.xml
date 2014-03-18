@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlogWebViewActivity" >
+        
+ <RelativeLayout
+     android:id="@+id/relativeLayout1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+        <EditText
+            android:id="@+id/textUri"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/but"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/but"
+            android:hint="@string/uri_prompt"
+            android:imeOptions="flagNoEnterAction"
+            android:inputType="textUri"
+            android:text="@string/uri_prompt" />
+
+        <Button
+            android:id="@+id/but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/goButton" />
+
+        </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1" />
+
+</RelativeLayout>
