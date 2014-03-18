@@ -47,6 +47,7 @@ public final class R {
         public static final int activity_browser=0x7f030001;
         public static final int activity_home_screen=0x7f030002;
         public static final int activity_specific_blog=0x7f030003;
+        public static final int location_map=0x7f030004;
     }
     public static final class menu {
         public static final int blog_view=0x7f070000;
