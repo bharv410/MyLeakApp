@@ -7,7 +7,7 @@
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="17" />
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -36,6 +36,10 @@
         <activity
             android:name="com.kidgeniusdesigns.leakapp.Browser"
             android:label="@string/title_activity_browser" >
+        </activity>
+        <activity
+            android:name="com.kidgeniusdesigns.leakapp.FileActivity"
+            android:label="@string/title_activity_file" >
         </activity>
     </application>
 

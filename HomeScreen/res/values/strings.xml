@@ -25,5 +25,6 @@
     <string name="title_activity_blog_home">BlogHomeActivity</string>
     <string name="title_activity_specific_blog">SpecificBlog</string>
     <string name="title_activity_browser">Browser</string>
+    <string name="title_activity_file">FileActivity</string>
 
 </resources>

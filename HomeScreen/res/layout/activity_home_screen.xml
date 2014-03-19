@@ -26,6 +26,14 @@
             android:layout_alignParentLeft="true"
             android:autoLink="all"
             android:background="@drawable/logo" />
+        <Button
+            android:id="@+id/fileButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/logo"
+            android:text="File Writer"
+            android:maxHeight="20dp"
+            android:onClick="toFileActivity" />
 
         <Button
             android:id="@+id/blogbutton"
@@ -38,7 +46,7 @@
             android:contentDescription="@string/blogbutton"
             android:maxHeight="20dp"
             android:onClick="toBlog" />
-
+        
         <Button
             android:id="@+id/webbutton"
             android:layout_width="wrap_content"

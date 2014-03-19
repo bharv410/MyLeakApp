@@ -44,6 +44,11 @@ public class HomeScreen extends Activity {
 	     Intent intent = new Intent(this, Browser.class);
 	     startActivity(intent);
 	 }
+	public void toFileActivity(View view){
+		Intent intent = new Intent(this, FileActivity.class);
+		
+		startActivity(intent);
+	}
 	
 	
 	protected static void logException(Exception e) {
