@@ -35,7 +35,8 @@
         </activity>
         <activity
             android:name="com.kidgeniusdesigns.leakapp.Browser"
-            android:label="@string/title_activity_browser" >
+            android:label="@string/title_activity_browser"
+            android:windowSoftInputMode="stateVisible" >
         </activity>
         <activity
             android:name="com.kidgeniusdesigns.leakapp.FileActivity"

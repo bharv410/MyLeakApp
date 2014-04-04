@@ -18,8 +18,7 @@
             android:layout_toLeftOf="@+id/but"
             android:hint="@string/uri_prompt"
             android:imeOptions="flagNoEnterAction"
-            android:inputType="textUri"
-            android:text="@string/uri_prompt" />
+            android:inputType="textUri" />
 
         <Button
             android:id="@+id/but"

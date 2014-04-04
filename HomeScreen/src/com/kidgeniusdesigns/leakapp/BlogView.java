@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -39,10 +40,12 @@ public class BlogView extends ListActivity {
 	protected ProgressBar mProgressBar;
 	private final String KEY_TITLE = "title";
 	private final String KEY_AUTHOR = "author";
+	private HashMap<Integer, String> urls;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		urls = new HashMap<Integer, String>();
 		setContentView(R.layout.activity_blog_view);
 		ConnectivityManager manager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -87,7 +90,10 @@ public class BlogView extends ListActivity {
 					title = Html.fromHtml(title).toString();
 					String author = post.getString(KEY_AUTHOR);
 					author = Html.fromHtml(author).toString();
-
+					
+					
+					String url =post.getString("url");
+					urls.put(i, url);
 					HashMap<String, String> blogPost = new HashMap<String, String>();
 					blogPost.put(KEY_TITLE, title);
 					blogPost.put(KEY_AUTHOR, author);
@@ -105,6 +111,13 @@ public class BlogView extends ListActivity {
 				HomeScreen.logException(e);
 			}
 		}
+	}
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		Intent intent = new Intent(this, Browser.class);
+		intent.putExtra("url", urls.get(position));
+		startActivity(intent);
 	}
 	
 	private void updateDisplayForError() {

@@ -64,23 +64,14 @@ public class FileActivity extends Activity {
 	
 		try {
 			//Reading the file back...
+					FileInputStream inputStream = openFileInput(theFileName);
+			        InputStreamReader isreader = new InputStreamReader(inputStream);
 
-			       /* We have to use the openFileInput()-method
-			        * the ActivityContext provides.
-			        * Again for security reasons with
-			        * openFileInput(...) */
-
-			        FileInputStream fIn = openFileInput(theFileName);
-			        InputStreamReader isr = new InputStreamReader(fIn);
-
-			        /* Prepare a char-Array that will
-			         * hold the chars we read back in. */
 			        char[] inputBuffer = new char[fileStr.length()];
 
-			        // Fill the Buffer with data from the file
-			        isr.read(inputBuffer);
+			        isreader.read(inputBuffer);
 
-			        // Transform the chars to a String
+			        // Transform the char Array to a String
 			        String readString = new String(inputBuffer);
 
 			        // Check if we read back the same chars that we had written out
@@ -92,28 +83,6 @@ public class FileActivity extends Activity {
 			      {ioe.printStackTrace();}
 	}
 	
-	/*public void readTheFile(View view){
-		BufferedReader br =null;
-		
-		try{
-			String sCurrentLine;
-			br = new BufferedReader(new FileReader(returnPath.concat(theFileName)));
-			//add every line being read to a string called returnString
-			while((sCurrentLine=br.readLine())!=null){
-				returnString.concat(sCurrentLine);
-			}
-		}catch(IOException e){
-			e.printStackTrace();
-		}finally{
-			try{
-				if(br!=null)br.close();
-				}catch(IOException e){
-					e.printStackTrace();
-				}}
-		
-		textView.setText(returnString);
-	}
-	*/
 	public static Boolean pathExists(String path, Context ctx)
 	{
 	    Boolean result = false;
